@@ -2,33 +2,36 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package ejerciciopilasedd;
 
 /**
  *
  * @author Santiago
  */
 
-public class Nodo {
-    String Cexpression;
-    int index;
-    
-    public Nodo (String expression){
-        this.index = 0;
-        Cexpression=new String();
-        Cexpression=expression;
+public class Nodo
+{
+   public Object object; 
+   public Nodo next = null;
+
+    public Nodo(Object object)
+    {
+        this.object = object;
     }
-    
-    public String returnn (){
-        String Aux=Cexpression.substring(index, index+1);
-        index ++;
-        return (Aux);
+
+    public Object getObject() {
+        return object;
     }
-    
-    public void finalCharacterElement (String charact){
-        Cexpression = Cexpression.concat(charact);
+
+    public Nodo getNext() {
+        return next;
     }
-    
-    public int Characters (){
-        return Cexpression.length();
-    } 
+
+    public void setObject(Object object) {
+        this.object = object;
+    }
+
+    public void setNext(Nodo next) {
+        this.next = next;
+    }
 }
